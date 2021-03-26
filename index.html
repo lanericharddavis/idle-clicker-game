@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css">
+  <title>Lane's IDLE-CLICKER-GAME</title>
+</head>
+
+<body>
+  <header class="container">
+    <div class="row p-3">
+      <div class="col text-center p-5">
+        <h1>FISH CLICKER | THE GAME</h1>
+      </div>
+    </div>
+  </header>
+
+
+  <main class="container">
+
+    <div class="row pb-5">
+      <div class="col text-center">
+        <p>Go Fishing | Catch Fish</p>
+      </div>
+    </div>
+
+    <div id="fishStats" class="row align-items-center py-5 text-center">
+      <div class="col-md-4">
+        <p>STATS</p>
+        <p>Fishing Poles: 0</p>
+        <p>Fishing Nets: 0</p>
+        <p>Fishing Boats: 0</p>
+        <p>Fishing Fleets: 0</p>
+      </div>
+      <div id="fishImg" class="col-md-4">
+        <img src="//placehold.it/200x200" alt="" onclick="goFish()">
+      </div>
+      <div class="col-md-4">
+        <p>Your Fish Count: 0</p>
+      </div>
+    </div>
+
+    <div class="row text-center">
+      <div class="col-md-3">
+        <img src="//placehold.it/100x100" alt="" id="poleMultipier" onclick="poleMultiplier()">
+        <p>Fishing Pole</p>
+        <p>Unlock at 50 Fish</p>
+        <p>+2 Fish Per Click</p>
+      </div>
+      <div class="col-md-3">
+        <img src="//placehold.it/100x100" alt="" id="netMultiplier" onclick="netMultiplier()">
+        <p>Fishing Net</p>
+        <p>Unlock at 200 Fish</p>
+        <p>+10 Fish Per Click</p>
+      </div>
+      <div class="col-md-3">
+        <img src="//placehold.it/100x100" alt="" id="boatMultiplier" onclick="boatMultiplier()">
+        <p>Fishing Boat</p>
+        <p>Unlock at 1000 Fish</p>
+        <p>+50 Fish Per Click</p>
+        <p>Auto +50 Fish Per 3 Seconds</p>
+      </div>
+      <div class="col-md-3">
+        <img src="//placehold.it/100x100" alt="" id="fleetMultiplier" onclick="fleetMultiplier()">
+        <p>Fishing Fleet</p>
+        <p>Unlock at 5000 Fish</p>
+        <p>+200 Fish Per Click</p>
+        <p>Auto +200 Fish Per 10 Seconds</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col text-center py-5">
+        <p>Here Fishy Fishy</p>
+      </div>
+
+    </div>
+  </main>
+
+
+  <footer class="container">
+    <div class="row">
+      <div class="col text-center">
+        <p>Page Created By Lane Davis</p>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+  <script src="app.js"></script>
+</body>
+
+</html>
