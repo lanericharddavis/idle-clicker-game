@@ -45,6 +45,7 @@ let boatCount = 0
 let boatPrice = 1000
 let fleetCount = 0
 let fleetPrice = 5000
+let autoFishies = null
 
 function upgradeQuantity() {
   clickUpgrades.poleUpgrades['quantity'] = poleCount
@@ -82,14 +83,14 @@ function goFish() {
   document.getElementById("fishImg")
   fishCount += clickValue
   console.log("fish")
-  drawStats()
+  getStarted()
 }
 
 function buyPole() {
-  if (fishCount >= 10) {
+  if (fishCount >= 50) {
     document.getElementById("buyPole").disabled = false
     poleCount++
-    fishCount -= 10
+    fishCount -= 50
     upgradeQuantity()
     clickValueUpdater()
     priceIncrease()
@@ -101,10 +102,10 @@ function buyPole() {
 }
 
 function buyNet() {
-  if (fishCount >= 20) {
+  if (fishCount >= 200) {
     document.getElementById("buyNet").disabled = false
     netCount++
-    fishCount -= 20
+    fishCount -= 200
     upgradeQuantity()
     clickValueUpdater()
     priceIncrease()
@@ -116,40 +117,53 @@ function buyNet() {
 }
 
 function buyBoat() {
-  if (fishCount >= 30) {
+  if (fishCount >= 10) {
     document.getElementById("buyBoat").disabled = false
     boatCount++
-    fishCount -= 30
+    fishCount -= 10
     upgradeQuantity()
     clickValueUpdater()
     priceIncrease()
     console.log("boat")
     drawStats()
     drawPriceUpdate()
+    autoFishTimer()
   }
   document.getElementById("buyBoat").disabled = true
 }
 
 function buyFleet() {
-  if (fishCount >= 40) {
+  if (fishCount >= 5000) {
     document.getElementById("buyFleet").disabled = false
     fleetCount++
-    fishCount -= 40
+    fishCount -= 5000
     upgradeQuantity()
     clickValueUpdater()
     priceIncrease()
     console.log("fleet")
     drawStats()
     drawPriceUpdate()
+    autoFishTimer()
   }
   document.getElementById("buyFleet").disabled = true
 }
 
+function autoFishTimer() {
+  autoFishies = setInterval(() => { buyBoat() }, 3000)
+  buyBoat()
+  console.log("3 seconds have passed")
+}
+
+function getStarted() {
+  drawStats()
+  drawPriceUpdate()
+}
+
 
 function drawStats() {
-  let fishCountUpdate = document.getElementById('statsUpdate')
+  let statsUpdate = document.getElementById('statsUpdate')
   let template = `
-  
+
     <div class="row align-items-center justify-content-center py-5 text-center">
       <div id="statsUpdate" class="col-md-4">
         <p>STATS</p>
@@ -166,13 +180,13 @@ function drawStats() {
         <p>Your Fish Count: ${fishCount}</p>
       </div>
     </div>
-  
+
   `
-  fishCountUpdate.innerHTML = template
+  statsUpdate.innerHTML = template
 }
 
 function drawPriceUpdate() {
-  let statsUpdate = document.getElementById('priceUpdate')
+  let priceUpdate = document.getElementById('priceUpdate')
   let template = `
 
     <div id="priceUpdate" class="row text-center text-light">
@@ -215,5 +229,14 @@ function drawPriceUpdate() {
     </div>
 
   `
-  statsUpdate.innerHTML = template
+  priceUpdate.innerHTML = template
 }
+
+
+
+
+
+
+
+
+
