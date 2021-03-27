@@ -16,8 +16,8 @@
 
 <body>
   <header class="container-fluid">
-    <div class="row p-3">
-      <div class="col text-center p-5">
+    <div class="row p-2">
+      <div class="col text-center p-2">
         <h1>FISH CLICKER | THE GAME</h1>
       </div>
     </div>
@@ -26,56 +26,122 @@
 
   <main class="container">
 
-    <div class="row pb-5">
+    <div class="row pb-3">
       <div class="col text-center">
         <p>Go Fishing | Catch Fish</p>
       </div>
     </div>
 
-    <div id="fishStats" class="row align-items-center py-5 text-center">
-      <div class="col-md-4">
+    <div class="row align-items-center justify-content-center py-5 text-center">
+      <div id="statsUpdate" class="col-md-4">
         <p>STATS</p>
         <p>Fishing Poles: 0</p>
         <p>Fishing Nets: 0</p>
         <p>Fishing Boats: 0</p>
         <p>Fishing Fleets: 0</p>
       </div>
-      <div id="fishImg" class="col-md-4">
-        <img src="//placehold.it/200x200" alt="" onclick="goFish()">
+      <div class="col-md-4">
+        <img src="http://www.pngall.com/wp-content/uploads/2016/03/Fish-PNG-4.png" alt="" class="smFishImg no-select"
+          onclick="goFish()">
       </div>
       <div class="col-md-4">
         <p>Your Fish Count: 0</p>
       </div>
     </div>
 
-    <div class="row text-center">
+    <!--
+    <div class="row">
+      <div class="card" style="width: 18rem;">
+        <img id="poleCounter" class="card-img-top smEnhanceImgs" onclick="poleCounter()"
+          src="https://fishingbooker.com/blog/media/rsz_rod_closeup.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Fishing Pole</h5>
+          <p class="card-text">Unlock Purchase at 50 Fish
+          </p>
+          <p class="card-text">+2 Fish Per Click
+          </p>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img id="poleCounter" class="card-img-top smEnhanceImgs" onclick="poleCounter()"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/A_fishing_net_in_Brandon_Creek_-_geograph.org.uk_-_921094.jpg/300px-A_fishing_net_in_Brandon_Creek_-_geograph.org.uk_-_921094.jpg"
+          alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Fishing Pole</h5>
+          <p class="card-text">Unlock Purchase at 50 Fish
+          </p>
+          <p class="card-text">+2 Fish Per Click
+          </p>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img id="poleCounter" class="card-img-top smEnhanceImgs" onclick="poleCounter()"
+          src="https://cdn.dealerspike.com/imglib/v1/800x600/imglib/trimsdb/10231091-0-70535721.jpg"
+          alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Fishing Pole</h5>
+          <p class="card-text">Unlock Purchase at 50 Fish
+          </p>
+          <p class="card-text">+2 Fish Per Click
+          </p>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img id="poleCounter" class="card-img-top smEnhanceImgs" onclick="poleCounter()"
+          src="https://www.lundsfish.com/wp-content/uploads/photo-gallery/imported_from_media_libray/Brianna-Louise.jpg?bwg=1529197339"
+          alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Fishing Pole</h5>
+          <p class="card-text">Unlock Purchase at 50 Fish
+          </p>
+          <p class="card-text">+2 Fish Per Click
+          </p>
+        </div>
+      </div>
+    </div>
+  -->
+
+
+    <div id="priceUpdate" class="row text-center text-light">
       <div class="col-md-3">
-        <img src="//placehold.it/100x100" alt="" id="poleCounter" onclick="poleCounter()">
+        <img src="https://fishingbooker.com/blog/media/rsz_rod_closeup.jpg" alt="" id="buyPole" class="smEnhanceImgs"
+          onclick="buyPole()">
         <p>Fishing Pole</p>
-        <p>Unlock at 50 Fish</p>
+        <p>Unlock Purchase at 50 Fish</p>
+        <p>Price: 50 Fish</p>
         <p>+2 Fish Per Click</p>
       </div>
       <div class="col-md-3">
-        <img src="//placehold.it/100x100" alt="" id="netCounter" onclick="netCounter()">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/A_fishing_net_in_Brandon_Creek_-_geograph.org.uk_-_921094.jpg/300px-A_fishing_net_in_Brandon_Creek_-_geograph.org.uk_-_921094.jpg"
+          alt="" id="buyNet" class="smEnhanceImgs" onclick="buyNet()">
         <p>Fishing Net</p>
-        <p>Unlock at 200 Fish</p>
+        <p>Unlock Purchase at 200 Fish</p>
+        <p>Price: 200 Fish</p>
         <p>+10 Fish Per Click</p>
       </div>
       <div class="col-md-3">
-        <img src="//placehold.it/100x100" alt="" id="boatCounter" onclick="boatCounter()">
+        <img src="https://cdn.dealerspike.com/imglib/v1/800x600/imglib/trimsdb/10231091-0-70535721.jpg" alt=""
+          id="buyBoat" class="smEnhanceImgs" onclick="buyBoat()">
         <p>Fishing Boat</p>
-        <p>Unlock at 1000 Fish</p>
+        <p>Unlock Purchase at 1000 Fish</p>
+        <p>Price: 1000 Fish</p>
         <p>+50 Fish Per Click</p>
         <p>Auto +50 Fish Per 3 Seconds</p>
       </div>
       <div class="col-md-3">
-        <img src="//placehold.it/100x100" alt="" id="fleetCounter" onclick="fleetCounter()">
+        <img
+          src="https://www.lundsfish.com/wp-content/uploads/photo-gallery/imported_from_media_libray/Brianna-Louise.jpg?bwg=1529197339"
+          alt="" id="buyFleet" class="smEnhanceImgs" onclick="buyFleet()">
         <p>Fishing Fleet</p>
-        <p>Unlock at 5000 Fish</p>
+        <p>Unlock Purchase at 5000 Fish</p>
+        <p>Price: 5000 Fish</p>
         <p>+200 Fish Per Click</p>
         <p>Auto +200 Fish Per 10 Seconds</p>
       </div>
     </div>
+
+
 
     <div class="row">
       <div class="col text-center py-5">
@@ -88,7 +154,7 @@
 
   <footer class="container-fluid">
     <div class="row">
-      <div class="col text-center">
+      <div class="col text-center text-light">
         <p>Page Created By Lane Davis</p>
       </div>
     </div>
