@@ -117,17 +117,16 @@ function buyNet() {
 }
 
 function buyBoat() {
-  if (fishCount >= 10) {
+  if (fishCount >= 1000) {
     document.getElementById("buyBoat").disabled = false
     boatCount++
-    fishCount -= 10
+    fishCount -= 1000
     upgradeQuantity()
     clickValueUpdater()
     priceIncrease()
     console.log("boat")
     drawStats()
-    drawPriceUpdate()
-    autoFishTimer()
+    autoFishBoatTimer()
   }
   document.getElementById("buyBoat").disabled = true
 }
@@ -143,15 +142,18 @@ function buyFleet() {
     console.log("fleet")
     drawStats()
     drawPriceUpdate()
-    autoFishTimer()
+    autoFishFleetTimer()
   }
   document.getElementById("buyFleet").disabled = true
 }
 
-function autoFishTimer() {
-  autoFishies = setInterval(() => { buyBoat() }, 3000)
-  buyBoat()
-  console.log("3 seconds have passed")
+function autoFishBoatTimer() {
+  setInterval(() => { goFish(), console.log("3 seconds have passed") }, 3000)
+}
+
+function autoFishFleetTimer() {
+  setInterval(() => { goFish(), console.log("10 seconds have passed") }, 10000)
+  console.log("10 seconds have passed")
 }
 
 function getStarted() {
@@ -231,12 +233,5 @@ function drawPriceUpdate() {
   `
   priceUpdate.innerHTML = template
 }
-
-
-
-
-
-
-
 
 
