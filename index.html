@@ -32,13 +32,14 @@
       </div>
     </div>
 
-    <div class="row align-items-center justify-content-center py-5 text-center">
-      <div id="statsUpdate" class="col-md-4">
+    <div id="statsUpdate" class="row align-items-center justify-content-center py-5 text-center">
+      <div class="col-md-4">
         <p>STATS</p>
-        <p>Fishing Poles: 0</p>
-        <p>Fishing Nets: 0</p>
-        <p>Fishing Boats: 0</p>
-        <p>Fishing Fleets: 0</p>
+        <p>Fishing Poles: 0 | Pole Value: 0</p>
+        <p>Fishing Nets: 0| Net Value: 0</p>
+        <p>Fishing Boats: 0| Boat Value: 0</p>
+        <p>Fishing Fleets: 0| Fleet Value: 0</p>
+        <p>Fish Per Click: 1</p>
       </div>
       <div class="col-md-4">
         <img src="http://www.pngall.com/wp-content/uploads/2016/03/Fish-PNG-4.png" alt="" class="smFishImg no-select"
@@ -51,47 +52,47 @@
 
     <div id="priceUpdate" class="row text-center text-light">
       <div class="col-md-3">
-        <img src="https://fishingbooker.com/blog/media/rsz_rod_closeup.jpg" alt="" id="buyPole" class="smEnhanceImgs"
-          onclick="buyPole()">
+        <img src="https://fishingbooker.com/blog/media/rsz_rod_closeup.jpg" alt="" id="buyPole"
+          class="smEnhanceImgs sepia-filter" onclick="buyPole()">
         <p>Fishing Pole</p>
         <p>Unlock Purchase at 50 Fish</p>
         <p>Price: 50 Fish</p>
-        <p>+2 Fish Per Click</p>
+        <p>+2 Fish / Click / # of Poles</p>
       </div>
       <div class="col-md-3">
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/A_fishing_net_in_Brandon_Creek_-_geograph.org.uk_-_921094.jpg/300px-A_fishing_net_in_Brandon_Creek_-_geograph.org.uk_-_921094.jpg"
-          alt="" id="buyNet" class="smEnhanceImgs" onclick="buyNet()">
+          alt="" id="buyNet" class="smEnhanceImgs sepia-filter" onclick="buyNet()">
         <p>Fishing Net</p>
         <p>Unlock Purchase at 200 Fish</p>
         <p>Price: 200 Fish</p>
-        <p>+10 Fish Per Click</p>
+        <p>+10 Fish / Click / # of Nets</p>
       </div>
       <div class="col-md-3">
         <img src="https://cdn.dealerspike.com/imglib/v1/800x600/imglib/trimsdb/10231091-0-70535721.jpg" alt=""
-          id="buyBoat" class="smEnhanceImgs" onclick="buyBoat()">
+          id="buyBoat" class="smEnhanceImgs sepia-filter" onclick="buyBoat()">
         <p>Fishing Boat</p>
         <p>Unlock Purchase at 1000 Fish</p>
         <p>Price: 1000 Fish</p>
-        <p>+50 Fish Per Click</p>
-        <p>Auto +50 Fish Per 3 Seconds</p>
+        <p>+50 Fish / Click / # of Boats</p>
+        <p>Auto +25 Fish Per 3 Seconds</p>
       </div>
       <div class="col-md-3">
         <img
           src="https://www.lundsfish.com/wp-content/uploads/photo-gallery/imported_from_media_libray/Brianna-Louise.jpg?bwg=1529197339"
-          alt="" id="buyFleet" class="smEnhanceImgs" onclick="buyFleet()">
+          alt="" id="buyFleet" class="smEnhanceImgs sepia-filter" onclick="buyFleet()">
         <p>Fishing Fleet</p>
         <p>Unlock Purchase at 5000 Fish</p>
         <p>Price: 5000 Fish</p>
-        <p>+200 Fish Per Click</p>
-        <p>Auto +200 Fish Per 10 Seconds</p>
+        <p>+200 Fish / Click / # of Fleets</p>
+        <p>Auto +100 Fish Per 10 Seconds</p>
       </div>
     </div>
 
 
 
     <div class="row">
-      <div class="col text-center py-5">
+      <div class="col text-center text-light py-5">
         <p>Here Fishy Fishy</p>
       </div>
 

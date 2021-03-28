@@ -30,3 +30,7 @@ main {
 .no-select {
   user-select: none;
 }
+
+.sepia-filter {
+  filter:sepia(100%),
+}
