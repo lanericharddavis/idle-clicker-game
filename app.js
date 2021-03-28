@@ -86,6 +86,17 @@ function goFish() {
   sepiaFilter()
 }
 
+function autoFish() {
+  if (boatCount > 0) {
+    fishCount += 25
+  }
+
+  if (fleetCount > 0) {
+    fishCount += 100
+  }
+  getStarted()
+}
+
 function sepiaFilter() {
   if (fishCount >= polePrice) {
     document.getElementById("buyPole").classList.remove("sepia-filter")
@@ -143,6 +154,7 @@ function buyNet() {
 }
 
 function buyBoat() {
+
   if (fishCount >= boatPrice) {
     document.getElementById("buyBoat").disabled = false
     boatCount++
@@ -153,8 +165,8 @@ function buyBoat() {
     priceIncrease()
     valueCalculator()
     console.log("boat")
-    drawStats()
     autoFishBoatTimer()
+    drawStats()
   }
   document.getElementById("buyBoat").disabled = true
 }
@@ -171,18 +183,24 @@ function buyFleet() {
     valueCalculator()
     console.log("fleet")
     drawStats()
-    drawPriceUpdate()
     autoFishFleetTimer()
+    drawPriceUpdate()
   }
   document.getElementById("buyFleet").disabled = true
 }
 
 function autoFishBoatTimer() {
-  setInterval(() => { fishCount += 25 }, 3000)
+  setInterval(() => {
+    autoFish(),
+      console.log("3 seconds have passed")
+  }, 3000)
 }
 
 function autoFishFleetTimer() {
-  setInterval(() => { fishCount += 100 }, 10000)
+  setInterval(() => {
+    autoFish(),
+      console.log("10 seconds have passed")
+  }, 10000)
 }
 
 function getStarted() {
