@@ -122,6 +122,7 @@ function sepiaFilter() {
 function buyPole() {
   if (fishCount >= polePrice) {
     document.getElementById("buyPole").disabled = false
+    document.getElementById("poleUnlock").remove.innerText
     poleCount++
     fishCount -= polePrice
     polePrice *= 2
@@ -213,7 +214,7 @@ function drawStats() {
   let statsUpdate = document.getElementById('statsUpdate')
   let template = `
       <div class="col-md-4">
-        <p>STATS</p>
+        <h3><b><u>STATS</u></b></h3>
         <p>Fishing Poles: ${poleCount} | Pole Value: ${poleValue}</p>
         <p>Fishing Nets: ${netCount}| Net Value: ${netValue}</p>
         <p>Fishing Boats: ${boatCount}| Boat Value: ${boatValue}</p>
@@ -221,11 +222,12 @@ function drawStats() {
         <p>Fish Per Click: ${clickValue}</p>
       </div>
       <div class="col-md-4">
-        <img src="./fish.jpg" alt="" class="smFishImg no-select"
+        <img src="./fish.jpg" alt="" class="smFishImg no-select shadow"
           onclick="goFish()">
       </div>
       <div class="col-md-4">
-        <p>Your Fish Count: ${fishCount}</p>
+        <p>Your Fish Count:</p>
+        <h3>${fishCount}</h3>
       </div>
   `
   statsUpdate.innerHTML = template
@@ -236,40 +238,40 @@ function drawPriceUpdate() {
   let template = `
 
       <div class="col-md-3">
-        <img src="./fishingpole.jpg" alt="" id="buyPole" class="smEnhanceImgs sepia-filter"
+        <img src="./fishingpole.jpg" alt="" id="buyPole" class="smEnhanceImgs sepia-filter shadow"
           onclick="buyPole()">
-        <p>Fishing Pole</p>
-        <p>Unlock Purchase at 50 Fish</p>
+        <h4><b><u>Buy Fishing Pole</u></b></h4>
+        <p id="poleUnlock">Unlock Purchase at 50 Fish</p>
         <p>Price: ${polePrice} Fish</p>
-        <p>+2 Fish / Click / # of Poles</p>
+        <p>+2 Fish / Click / Pole</p>
       </div>
       <div class="col-md-3">
         <img
           src="./net.jpg"
-          alt="" id="buyNet" class="smEnhanceImgs sepia-filter" onclick="buyNet()">
-        <p>Fishing Net</p>
+          alt="" id="buyNet" class="smEnhanceImgs sepia-filter shadow" onclick="buyNet()">
+        <h4><b><u>Buy Fishing Net</u></b></h4>
         <p>Unlock Purchase at 200 Fish</p>
         <p>Price: ${netPrice} Fish</p>
-        <p>+10 Fish / Click / # of Nets</p>
+        <p>+10 Fish / Click / Net</p>
       </div>
       <div class="col-md-3">
         <img src="./boat.jpg" alt=""
-          id="buyBoat" class="smEnhanceImgs sepia-filter" onclick="buyBoat()">
-        <p>Fishing Boat</p>
+          id="buyBoat" class="smEnhanceImgs sepia-filter shadow" onclick="buyBoat()">
+        <h4><b><u>Buy Fishing Boat</u></b></h4>
         <p>Unlock Purchase at 1000 Fish</p>
         <p>Price: ${boatPrice} Fish</p>
-        <p>+50 Fish / Click / # of Boats</p>
-        <p>Auto +25 Fish Per 3 Seconds</p>
+        <p>+50 Fish / Click / Boat</p>
+        <p>Auto +25 Fish / 3 Seconds / Boat</p>
       </div>
       <div class="col-md-3">
         <img
           src="./fleet.jpg"
-          alt="" id="buyFleet" class="smEnhanceImgs sepia-filter" onclick="buyFleet()">
-        <p>Fishing Fleet</p>
+          alt="" id="buyFleet" class="smEnhanceImgs sepia-filter shadow" onclick="buyFleet()">
+        <h4><b><u>Buy Fishing Fleet</u></b></h4>
         <p>Unlock Purchase at 5000 Fish</p>
         <p>Price: ${fleetPrice} Fish</p>
-        <p>+200 Fish / Click / # of Fleets</p>
-        <p>Auto +100 Fish Per 10 Seconds</p>
+        <p>+200 Fish / Click / Fleet</p>
+        <p>Auto +100 Fish / 10 Seconds / Fleet</p>
       </div>
 
   `
@@ -277,3 +279,7 @@ function drawPriceUpdate() {
 }
 
 
+// How to make the auto generate function to only run once?
+// Why is background moving when I initially click the fish?
+// How to take away a css class after a given action (sepia-filter on img after it become available)
+// How to make HTML text disappear after a given moment (delete 'unlock purchase' text after it becomes available)

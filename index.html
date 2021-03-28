@@ -34,7 +34,7 @@
 
     <div id="statsUpdate" class="row align-items-center justify-content-center py-5 text-center">
       <div class="col-md-4">
-        <p>STATS</p>
+        <h3><b><u>STATS</u></b></h3>
         <p>Fishing Poles: 0 | Pole Value: 0</p>
         <p>Fishing Nets: 0| Net Value: 0</p>
         <p>Fishing Boats: 0| Boat Value: 0</p>
@@ -42,43 +42,47 @@
         <p>Fish Per Click: 1</p>
       </div>
       <div class="col-md-4">
-        <img src="./fish.jpg" alt="" class="smFishImg no-select" onclick="goFish()">
+        <img src="./fish.jpg" alt="" class="smFishImg no-select shadow glow-blue" onclick="goFish()">
       </div>
       <div class="col-md-4">
-        <p>Your Fish Count: 0</p>
+        <p>Your Fish Count:</p>
+        <h3>0</h3>
       </div>
     </div>
 
-    <div id="priceUpdate" class="row text-center text-light">
+    <div id="priceUpdate" class="row text-center text-light outline-text">
       <div class="col-md-3">
-        <img src="./fishingpole.jpg" alt="" id="buyPole" class="smEnhanceImgs sepia-filter" onclick="buyPole()">
-        <p>Fishing Pole</p>
-        <p>Unlock Purchase at 50 Fish</p>
+        <img src="./fishingpole.jpg" alt="" id="buyPole" class="smEnhanceImgs sepia-filter shadow glow-green"
+          onclick="buyPole()">
+        <h4><b><u>Buy Fishing Pole</u></b></h4>
+        <p id="poleUnlock">Unlock Purchase at 50 Fish</p>
         <p>Price: 50 Fish</p>
-        <p>+2 Fish / Click / # of Poles</p>
+        <p>+2 Fish / Click / Pole</p>
       </div>
       <div class="col-md-3">
-        <img src="./net.jpg" alt="" id="buyNet" class="smEnhanceImgs sepia-filter" onclick="buyNet()">
-        <p>Fishing Net</p>
+        <img src="./net.jpg" alt="" id="buyNet" class="smEnhanceImgs sepia-filter shadow glow-green" onclick="buyNet()">
+        <h4><b><u>Buy Fishing Net</u></b></h4>
         <p>Unlock Purchase at 200 Fish</p>
         <p>Price: 200 Fish</p>
-        <p>+10 Fish / Click / # of Nets</p>
+        <p>+10 Fish / Click / Net</p>
       </div>
       <div class="col-md-3">
-        <img src="./boat.jpg" alt="" id="buyBoat" class="smEnhanceImgs sepia-filter" onclick="buyBoat()">
-        <p>Fishing Boat</p>
+        <img src="./boat.jpg" alt="" id="buyBoat" class="smEnhanceImgs sepia-filter shadow glow-green"
+          onclick="buyBoat()">
+        <h4><b><u>Buy Fishing Boat</u></b></h4>
         <p>Unlock Purchase at 1000 Fish</p>
         <p>Price: 1000 Fish</p>
-        <p>+50 Fish / Click / # of Boats</p>
-        <p>Auto +25 Fish Per 3 Seconds</p>
+        <p>+50 Fish / Click / Boat</p>
+        <p>Auto +25 Fish / 3 Seconds / Boat</p>
       </div>
       <div class="col-md-3">
-        <img src="./fleet.jpg" alt="" id="buyFleet" class="smEnhanceImgs sepia-filter" onclick="buyFleet()">
-        <p>Fishing Fleet</p>
+        <img src="./fleet.jpg" alt="" id="buyFleet" class="smEnhanceImgs sepia-filter shadow glow-green"
+          onclick="buyFleet()">
+        <h4><b><u>Buy Fishing Fleet</u></b></h4>
         <p>Unlock Purchase at 5000 Fish</p>
         <p>Price: 5000 Fish</p>
         <p>+200 Fish / Click / # of Fleets</p>
-        <p>Auto +100 Fish Per 10 Seconds</p>
+        <p>Auto +100 Fish / 10 Seconds / Fleet</p>
       </div>
     </div>
 
