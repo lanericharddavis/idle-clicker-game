@@ -12,8 +12,9 @@ main {
 }
 
 .smFishImg {
-  width: 10rem;
-  height: 10rem;
+  width: 11rem;
+  height: 11rem;
+  border-radius: 50%;
 }
 
 
@@ -21,10 +22,6 @@ main {
   width: 8rem;
   height: 8rem;
   border-radius: 50%;
-}
-
-.transparentGrey {
-  background-color: rgba(83, 83, 83, 0.678);
 }
 
 .no-select {

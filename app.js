@@ -212,8 +212,6 @@ function getStarted() {
 function drawStats() {
   let statsUpdate = document.getElementById('statsUpdate')
   let template = `
-
-    <div id="statsUpdate" class="row align-items-center justify-content-center py-5  text-center">
       <div class="col-md-4">
         <p>STATS</p>
         <p>Fishing Poles: ${poleCount} | Pole Value: ${poleValue}</p>
@@ -223,14 +221,12 @@ function drawStats() {
         <p>Fish Per Click: ${clickValue}</p>
       </div>
       <div class="col-md-4">
-        <img src="http://www.pngall.com/wp-content/uploads/2016/03/Fish-PNG-4.png" alt="" class="smFishImg no-select"
+        <img src="./fish.jpg" alt="" class="smFishImg no-select"
           onclick="goFish()">
       </div>
       <div class="col-md-4">
         <p>Your Fish Count: ${fishCount}</p>
       </div>
-    </div>
-
   `
   statsUpdate.innerHTML = template
 }
@@ -239,9 +235,8 @@ function drawPriceUpdate() {
   let priceUpdate = document.getElementById('priceUpdate')
   let template = `
 
-    <div id="priceUpdate" class="row text-center text-light">
       <div class="col-md-3">
-        <img src="https://fishingbooker.com/blog/media/rsz_rod_closeup.jpg" alt="" id="buyPole" class="smEnhanceImgs sepia-filter"
+        <img src="./fishingpole.jpg" alt="" id="buyPole" class="smEnhanceImgs sepia-filter"
           onclick="buyPole()">
         <p>Fishing Pole</p>
         <p>Unlock Purchase at 50 Fish</p>
@@ -250,7 +245,7 @@ function drawPriceUpdate() {
       </div>
       <div class="col-md-3">
         <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/A_fishing_net_in_Brandon_Creek_-_geograph.org.uk_-_921094.jpg/300px-A_fishing_net_in_Brandon_Creek_-_geograph.org.uk_-_921094.jpg"
+          src="./net.jpg"
           alt="" id="buyNet" class="smEnhanceImgs sepia-filter" onclick="buyNet()">
         <p>Fishing Net</p>
         <p>Unlock Purchase at 200 Fish</p>
@@ -258,7 +253,7 @@ function drawPriceUpdate() {
         <p>+10 Fish / Click / # of Nets</p>
       </div>
       <div class="col-md-3">
-        <img src="https://cdn.dealerspike.com/imglib/v1/800x600/imglib/trimsdb/10231091-0-70535721.jpg" alt=""
+        <img src="./boat.jpg" alt=""
           id="buyBoat" class="smEnhanceImgs sepia-filter" onclick="buyBoat()">
         <p>Fishing Boat</p>
         <p>Unlock Purchase at 1000 Fish</p>
@@ -268,7 +263,7 @@ function drawPriceUpdate() {
       </div>
       <div class="col-md-3">
         <img
-          src="https://www.lundsfish.com/wp-content/uploads/photo-gallery/imported_from_media_libray/Brianna-Louise.jpg?bwg=1529197339"
+          src="./fleet.jpg"
           alt="" id="buyFleet" class="smEnhanceImgs sepia-filter" onclick="buyFleet()">
         <p>Fishing Fleet</p>
         <p>Unlock Purchase at 5000 Fish</p>
@@ -276,7 +271,6 @@ function drawPriceUpdate() {
         <p>+200 Fish / Click / # of Fleets</p>
         <p>Auto +100 Fish Per 10 Seconds</p>
       </div>
-    </div>
 
   `
   priceUpdate.innerHTML = template
